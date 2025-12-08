@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=3 uid="uid://brlpsqe8d544p"]
+
+[ext_resource type="Script" uid="uid://dokwuaec0r1s0" path="res://scenes/riddle_1.gd" id="1_2kn63"]
+[ext_resource type="Theme" uid="uid://sq0n6lqukxx5" path="res://theme.tres" id="1_qaw72"]
+
+[sub_resource type="Animation" id="Animation_qaw72"]
+resource_name = "typewriter"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_2kn63"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2kn63"]
+_data = {
+&"RESET": SubResource("Animation_2kn63"),
+&"typewriter": SubResource("Animation_qaw72")
+}
+
+[node name="riddle1" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2kn63")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1054.5
+offset_top = -632.0
+offset_right = 1054.5
+offset_bottom = 632.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1658459, 0.28475168, 0.5073147, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -990.0
+offset_top = -562.0
+offset_right = 990.0
+offset_bottom = 562.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qaw72")
+theme_override_font_sizes/normal_font_size = 100
+text = "your first clue comes in the form of a riddle. The first man found dead had a calandar above him, with five dates circled in red:	3, 4, 9, 10, and	11. We know these numbers point directly to the killer’s name. "
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_2kn63")
+}
