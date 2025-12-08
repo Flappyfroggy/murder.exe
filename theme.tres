@@ -1,0 +1,37 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://sq0n6lqukxx5"]
+
+[ext_resource type="FontFile" uid="uid://cnynwt32uwx4h" path="res://assets/connection_ii/ConnectionII.otf" id="1_e1x85"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vewoc"]
+bg_color = Color(0.06787214, 0.1528044, 0.47536492, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03wi1"]
+bg_color = Color(0.12554324, 0.26934227, 0.41566238, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[resource]
+Button/colors/font_color = Color(0.80919975, 0, 0.17519084, 1)
+Button/colors/font_hover_color = Color(0.5794005, 0.13663971, 0.16187787, 1)
+Button/constants/outline_size = 25
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_e1x85")
+Button/styles/hover = SubResource("StyleBoxFlat_vewoc")
+Button/styles/normal = SubResource("StyleBoxFlat_03wi1")
+RichTextLabel/font_sizes/normal_font_size = 75
+RichTextLabel/fonts/normal_font = ExtResource("1_e1x85")

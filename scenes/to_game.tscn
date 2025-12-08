@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgt1prjg3dokk"]
+
+[ext_resource type="FontFile" uid="uid://cnynwt32uwx4h" path="res://assets/connection_ii/ConnectionII.otf" id="1_mru4w"]
+[ext_resource type="Script" uid="uid://cibyc22tp11fv" path="res://button.gd" id="2_gxf3p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vewoc"]
+bg_color = Color(0.06787214, 0.1528044, 0.47536492, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03wi1"]
+bg_color = Color(0.12554324, 0.26934227, 0.41566238, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="Theme" id="Theme_yqs1b"]
+Button/colors/font_color = Color(0.80919975, 0, 0.17519084, 1)
+Button/colors/font_hover_color = Color(0.5794005, 0.13663971, 0.16187787, 1)
+Button/constants/outline_size = 25
+Button/font_sizes/font_size = 50
+Button/fonts/font = ExtResource("1_mru4w")
+Button/styles/hover = SubResource("StyleBoxFlat_vewoc")
+Button/styles/normal = SubResource("StyleBoxFlat_03wi1")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_yqs1b")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1250.0
+offset_top = -268.0
+offset_right = 1250.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 200
+text = "START"
+script = ExtResource("2_gxf3p")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

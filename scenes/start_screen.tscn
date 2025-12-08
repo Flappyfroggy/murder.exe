@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://8360ygu0iwlk"]
+
+[ext_resource type="Texture2D" uid="uid://oofj1vxxdgfj" path="res://assets/start_bg.png" id="1_tx5wa"]
+[ext_resource type="PackedScene" uid="uid://dgt1prjg3dokk" path="res://scenes/to_game.tscn" id="2_o7i0r"]
+
+[node name="start_screen" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1250, 750)
+texture = ExtResource("1_tx5wa")
+
+[node name="Control" parent="." instance=ExtResource("2_o7i0r")]
+offset_left = 1245.0
+offset_top = 1502.0
+offset_right = 1245.0
+offset_bottom = 1502.0
