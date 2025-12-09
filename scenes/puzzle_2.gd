@@ -3,7 +3,8 @@ extends Control
 @onready var suspect1 = $VBoxContainer/Label
 @onready var suspect2 = $VBoxContainer/Label2
 @onready var suspect3 = $VBoxContainer/Label3
-@onready var murderer = $"VBoxContainer/enter name"
+@onready var murderer = $"VBoxContainer/murderer_name"
+@onready var timer = $Timer
 func _ready():
 	animation.play("typewriter")
 
@@ -32,7 +33,12 @@ func _on_option_button_3_item_selected(index2: int) -> void:
 func _on_enter_name_text_submitted(new_text: String) -> void:
 	if new_text == "2":
 		murderer.text = "That sounds right. We can take it from here."
+		timer.start()
 	if not new_text == "2" and not new_text == "HINT": 
 		murderer.text = "Are you sure? (RETRY)"
 	if new_text == "HINT":
 		murderer.text = "As mentioned previously, the incident occured during daytime."
+
+
+func _on_timer_timeout() -> void:
+	e.finishedcase1 = true

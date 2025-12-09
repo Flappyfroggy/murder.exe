@@ -16,4 +16,4 @@ func _on_enter_name_text_submitted(new_text: String) -> void:
 
 
 func _on_to_next_puzzle_timeout() -> void:
-	get_tree().change_scene_to_file("res://scenes/puzzle_2.tscn")
+	e.riddle1_complete = true
