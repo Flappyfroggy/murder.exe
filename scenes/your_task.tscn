@@ -58,37 +58,31 @@ metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -1054.5
+anchors_preset = -1
+anchor_left = -351.0
+anchor_right = 352.0
 offset_top = -632.0
-offset_right = 1054.5
 offset_bottom = 632.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.1658459, 0.28475168, 0.5073147, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -990.0
-offset_top = -562.0
-offset_right = 990.0
-offset_bottom = 562.0
+anchors_preset = -1
+anchor_left = 0.030583214
+anchor_top = 0.05537975
+anchor_right = 0.9694168
+anchor_bottom = 0.94462025
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_h7l0g")
 theme_override_font_sizes/normal_font_size = 100
-text = "3 murders have occured on the same day, all on the bustling streets of Eeoeo.  Is one person behind this all or, are they all separate cases? Your task is to solve puzzles, get clues, tips and determine who is behind this, and why. 												Good Luck	[Redacted User]"
+text = "3 murders have occured on the same day, all in broad daylight on the bustling streets of Eeoeo.  Is one person behind this all or, are they all separate cases? Your task is to solve puzzles, get clues, tips and determine who is behind this, and why. 												Good Luck	[Redacted User]"
 visible_characters = 0
 visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
