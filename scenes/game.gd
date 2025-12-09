@@ -3,9 +3,13 @@ extends Node2D
 @onready var riddle1_preload = preload("res://scenes/riddle_1.tscn")
 @onready var riddle2_preload = preload("res://scenes/puzzle_2.tscn")
 @onready var finishcase1_preload = preload("res://scenes/finished_murder_1.tscn")
+@onready var puzzle3_preload = preload("res://scenes/puzzle_3.tscn")
+@onready var puzzle4_preload = preload("res://scenes/puzzle_4.tscn")
 var riddle1
 var riddle2
 var finishcase1
+var puzzle3
+var puzzle4
 func _ready():
 	var task = task_preload.instantiate()
 	task.position = Vector2(1256,748)
@@ -23,7 +27,23 @@ func _process(_float) -> void:
 		add_child(riddle2)
 		e.shownriddle2 = true
 	if e.finishedcase1 and not e.shown_finishcase1:
+		riddle2.hide()
 		finishcase1 = finishcase1_preload.instantiate()
 		finishcase1.position = Vector2(1256,748)
 		add_child(finishcase1)
 		e.shown_finishcase1 = true
+	if e.to_puzzle3 and not e.shown_puzzle3:
+		finishcase1.hide()
+		e.shown_puzzle3 = true
+		puzzle3 = puzzle3_preload.instantiate()
+		puzzle3.position = Vector2(1256,748)
+		add_child(puzzle3)
+	if e.to_puzzle4 and not e.shown_puzzle4:
+		puzzle3.hide()
+		puzzle4 = puzzle4_preload.instantiate()
+		puzzle4.position = Vector2(1256,748)
+		add_child(puzzle4)
+		e.shown_puzzle4 = true
+	if e.to_finishcase2 and not e.shown_finishcase2:
+		puzzle4.hide()
+		e.shown_finishcase2 = true

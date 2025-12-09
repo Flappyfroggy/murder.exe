@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://bnhe178wrdtkt"]
 
-[ext_resource type="Texture2D" uid="uid://c1dtj1wddemo2" path="res://assets/Untitled_Artwork.png" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://ck2ulfgl4laop" path="res://scenes/game.gd" id="1_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://oofj1vxxdgfj" path="res://assets/start_bg.png" id="2_yqjtg"]
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_yqjtg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1250, 750)
-texture = ExtResource("1_uwrxv")
+texture = ExtResource("2_yqjtg")
