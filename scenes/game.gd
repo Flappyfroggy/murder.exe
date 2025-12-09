@@ -5,11 +5,17 @@ extends Node2D
 @onready var finishcase1_preload = preload("res://scenes/finished_murder_1.tscn")
 @onready var puzzle3_preload = preload("res://scenes/puzzle_3.tscn")
 @onready var puzzle4_preload = preload("res://scenes/puzzle_4.tscn")
+@onready var finishcase2_preload = preload("res://scenes/finish_case_2.tscn")
+@onready var puzzle5_preload = preload("res://scenes/puzzle_5.tscn")
+@onready var thankyou_preload = preload("res://scenes/thankyou.tscn")
 var riddle1
 var riddle2
 var finishcase1
 var puzzle3
 var puzzle4
+var finishcase2
+var puzzle5
+var thankyou
 func _ready():
 	var task = task_preload.instantiate()
 	task.position = Vector2(1256,748)
@@ -47,3 +53,18 @@ func _process(_float) -> void:
 	if e.to_finishcase2 and not e.shown_finishcase2:
 		puzzle4.hide()
 		e.shown_finishcase2 = true
+		finishcase2 = finishcase2_preload.instantiate()
+		finishcase2.position = Vector2(1256,748)
+		add_child(finishcase2)
+	if e.to_puzzle5 and not e.shown_puzzle5:
+		finishcase2.hide()
+		e.shown_puzzle5 = true
+		puzzle5 = puzzle5_preload.instantiate()
+		puzzle5.position = Vector2(1256,748)
+		add_child(puzzle5)
+	if e.to_thankyou and not e.shown_thankyou:
+		e.shown_thankyou = true
+		puzzle5.hide()
+		thankyou = thankyou_preload.instantiate()
+		add_child(thankyou)
+		thankyou.position = Vector2(1256,748)

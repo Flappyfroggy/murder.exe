@@ -67,7 +67,7 @@ color = Color(0.1658459, 0.28475168, 0.5073147, 1)
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5092
+anchor_left = 0.4948
 anchor_top = 0.5
 anchor_right = 0.4948
 anchor_bottom = 0.5366667
@@ -79,7 +79,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_p438e")
 theme_override_font_sizes/normal_font_size = 100
-text = "The man in this case was found with dried blood stains next to some market stalls, and we know from a tip that the killer is at XII minus V.  At 4, the flower vendor was open. At 5, the bread vendor opened. At 7, the drink vendor opened.  At 8, the bagel vendor opened. "
+text = "The man in this case was found with dried blood stains next to some market stalls and was a class 6 citizen.  We know from a tip that the killer is at XII minus V.  At 4, the flower vendor was open. At 5, the bread vendor opened. At 7, the drink vendor opened.  At 8, the bagel vendor opened. "
 visible_characters = 0
 visible_ratio = 0.0
 metadata/_edit_use_anchors_ = true

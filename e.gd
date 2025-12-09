@@ -11,3 +11,7 @@ var to_puzzle4: bool = false
 var shown_puzzle4: bool = false
 var to_finishcase2: bool = false
 var shown_finishcase2: bool = false
+var to_puzzle5: bool = false
+var shown_puzzle5: bool = false
+var to_thankyou: bool = false
+var shown_thankyou: bool = false

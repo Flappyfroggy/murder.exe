@@ -7,11 +7,11 @@ func _ready() -> void:
 
 func _on_enter_name_text_submitted(new_text: String) -> void:
 	if new_text == "LILA":
-		label.text = "You seem to be right"
+		label.text = "You seem to be right."
 		timer.start()
-	if not new_text == "LILA" and not new_text == "CLUE":
+	if not new_text == "LILA" and not new_text == "HINT":
 		label.text = "I.. don't think that's right."
-	if new_text == "CLUE":
+	if new_text == "HINT":
 		label.text = "the blood found near the incident was dried."
 
 

@@ -79,7 +79,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_qaw72")
 theme_override_font_sizes/normal_font_size = 100
-text = "your first clue comes in the form of a riddle. The first man found dead had a calandar above him, with five dates circled in red:	3, 4, 9, 10, and		11. We know these numbers point directly to the killer’s name. "
+text = "your first clue comes in the form of a riddle. The first man found dead was a class 5 citizen and had a calandar above him, with five dates circled in red:	3, 4, 9, 10, and		11. We know these numbers point directly to the killer’s name. "
 visible_characters = 0
 visible_ratio = 0.0
 

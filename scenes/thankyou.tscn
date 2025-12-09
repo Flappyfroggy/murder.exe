@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2mkploooaqoi"]
+
+[ext_resource type="Theme" uid="uid://sq0n6lqukxx5" path="res://theme.tres" id="1_os4n3"]
+[ext_resource type="Script" uid="uid://dmphkn8316nc7" path="res://scenes/thankyou.gd" id="1_rdppx"]
+
+[node name="thankyou" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rdppx")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5044
+anchor_top = 0.504
+anchor_right = 0.5044
+anchor_bottom = 0.504
+offset_left = -941.0
+offset_top = -641.0
+offset_right = 1041.0
+offset_bottom = 674.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_os4n3")
+theme_override_colors/default_color = Color(0.8565835, 0.9916288, 0.9999998, 1)
+theme_override_font_sizes/normal_font_size = 400
+text = "thanks for playing!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
