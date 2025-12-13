@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ccb07mhbtyt0x"]
+[gd_scene load_steps=8 format=3 uid="uid://ccb07mhbtyt0x"]
 
 [ext_resource type="Theme" uid="uid://sq0n6lqukxx5" path="res://theme.tres" id="1_621pd"]
 [ext_resource type="Script" uid="uid://bmxtr71hm0lc7" path="res://scenes/puzzle_4.gd" id="1_aahrf"]
+[ext_resource type="PackedScene" uid="uid://bv1lmuu4k4jfn" path="res://scenes/correct.tscn" id="3_8e0ch"]
+[ext_resource type="PackedScene" uid="uid://benxvfa7jto56" path="res://scenes/wrong.tscn" id="4_i5eoh"]
 
 [sub_resource type="Animation" id="Animation_f6wgn"]
 length = 0.001
@@ -120,6 +122,10 @@ placeholder_text = "Name... or type HINT for a hint"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.5
+
+[node name="Node" parent="." instance=ExtResource("3_8e0ch")]
+
+[node name="Node2" parent="." instance=ExtResource("4_i5eoh")]
 
 [connection signal="text_submitted" from="VBoxContainer/enter name" to="." method="_on_enter_name_text_submitted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

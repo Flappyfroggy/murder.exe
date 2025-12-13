@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://td2gkluro65s"
+path="res://.godot/imported/Troubadeck 47 Hoof It.ogg-2cff092c8ea40fd815877399af697089.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Troubadeck 47 Hoof It.ogg"
+dest_files=["res://.godot/imported/Troubadeck 47 Hoof It.ogg-2cff092c8ea40fd815877399af697089.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

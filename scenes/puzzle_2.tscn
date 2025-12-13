@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cr3vuioy7fq5r"]
+[gd_scene load_steps=8 format=3 uid="uid://cr3vuioy7fq5r"]
 
 [ext_resource type="Script" uid="uid://b2t3pk7obnr6c" path="res://scenes/puzzle_2.gd" id="1_f6wgn"]
 [ext_resource type="Theme" uid="uid://sq0n6lqukxx5" path="res://theme.tres" id="1_yywr8"]
+[ext_resource type="PackedScene" uid="uid://bv1lmuu4k4jfn" path="res://scenes/correct.tscn" id="3_m834d"]
+[ext_resource type="PackedScene" uid="uid://benxvfa7jto56" path="res://scenes/wrong.tscn" id="4_2vy86"]
 
 [sub_resource type="Animation" id="Animation_f6wgn"]
 length = 0.001
@@ -169,6 +171,10 @@ placeholder_text = "Number EG.  '1'  or type HINT for a hint"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.5
+
+[node name="Node" parent="." instance=ExtResource("3_m834d")]
+
+[node name="Node2" parent="." instance=ExtResource("4_2vy86")]
 
 [connection signal="item_selected" from="VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
 [connection signal="item_selected" from="VBoxContainer/OptionButton2" to="." method="_on_option_button_2_item_selected"]

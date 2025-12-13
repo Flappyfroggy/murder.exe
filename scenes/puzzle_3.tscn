@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dy8kmfxv32fwv"]
+[gd_scene load_steps=8 format=3 uid="uid://dy8kmfxv32fwv"]
 
 [ext_resource type="Script" uid="uid://ca3nqlvsqgpee" path="res://scenes/puzzle_3.gd" id="1_hhd0g"]
 [ext_resource type="Theme" uid="uid://sq0n6lqukxx5" path="res://theme.tres" id="1_p438e"]
+[ext_resource type="PackedScene" uid="uid://bv1lmuu4k4jfn" path="res://scenes/correct.tscn" id="3_26wdn"]
+[ext_resource type="PackedScene" uid="uid://benxvfa7jto56" path="res://scenes/wrong.tscn" id="4_hodwx"]
 
 [sub_resource type="Animation" id="Animation_f6wgn"]
 length = 0.001
@@ -119,6 +121,10 @@ placeholder_text = "EG. 'BAGEL VENDOR' or type HINT for a hint"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.5
+
+[node name="Node" parent="." instance=ExtResource("3_26wdn")]
+
+[node name="Node2" parent="." instance=ExtResource("4_hodwx")]
 
 [connection signal="text_submitted" from="VBoxContainer/enter name" to="." method="_on_enter_name_text_submitted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

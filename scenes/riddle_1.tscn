@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://brlpsqe8d544p"]
+[gd_scene load_steps=8 format=3 uid="uid://brlpsqe8d544p"]
 
 [ext_resource type="Script" uid="uid://dokwuaec0r1s0" path="res://scenes/riddle_1.gd" id="1_2kn63"]
 [ext_resource type="Theme" uid="uid://sq0n6lqukxx5" path="res://theme.tres" id="1_qaw72"]
+[ext_resource type="PackedScene" uid="uid://bv1lmuu4k4jfn" path="res://scenes/correct.tscn" id="3_cky8x"]
+[ext_resource type="PackedScene" uid="uid://benxvfa7jto56" path="res://scenes/wrong.tscn" id="4_hnddp"]
 
 [sub_resource type="Animation" id="Animation_2kn63"]
 length = 0.001
@@ -118,6 +120,10 @@ placeholder_text = "Name... or type HINT for a hint"
 
 [node name="to_next_puzzle" type="Timer" parent="."]
 wait_time = 2.5
+
+[node name="Node" parent="." instance=ExtResource("3_cky8x")]
+
+[node name="Node2" parent="." instance=ExtResource("4_hnddp")]
 
 [connection signal="text_submitted" from="VBoxContainer/enter name" to="." method="_on_enter_name_text_submitted"]
 [connection signal="timeout" from="to_next_puzzle" to="." method="_on_to_next_puzzle_timeout"]
