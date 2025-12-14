@@ -4,6 +4,7 @@ extends Control
 @onready var timer = $to_next_puzzle
 @onready var correct = $Node/AudioStreamPlayer
 @onready var wrong = $Node2/AudioStreamPlayer
+@onready var sprite = $CanvasLayer
 func _ready() -> void:
 	animationo.play("typewriter")
 
@@ -21,3 +22,4 @@ func _on_enter_name_text_submitted(new_text: String) -> void:
 
 func _on_to_next_puzzle_timeout() -> void:
 	e.riddle1_complete = true
+	sprite.hide()

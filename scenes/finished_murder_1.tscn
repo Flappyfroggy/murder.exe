@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://crifdnmkqw85b"]
+[gd_scene load_steps=7 format=3 uid="uid://crifdnmkqw85b"]
 
 [ext_resource type="Script" uid="uid://43nhdn0v7csx" path="res://finished_murder_1.gd" id="1_h7213"]
 [ext_resource type="Theme" uid="uid://sq0n6lqukxx5" path="res://theme.tres" id="2_re3g1"]
+[ext_resource type="Texture2D" uid="uid://bfyefgxgggtm0" path="res://assets/hitman.png" id="3_re3g1"]
 
 [sub_resource type="Animation" id="Animation_f6wgn"]
 length = 0.001
@@ -71,15 +72,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -994.0
+offset_left = -1027.0
 offset_top = -574.0
-offset_right = 988.0
-offset_bottom = 280.0
+offset_right = 355.0
+offset_bottom = 597.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_re3g1")
 theme_override_font_sizes/normal_font_size = 100
 text = "Congrats on solving the first case.  Thanks to your help, we now know that the murderer was a hitman hired by someone working under the government. Why, we still don't know. For now, [Redacted User],  continue examining the remaining cases. "
+scroll_active = false
 visible_characters = 0
 visible_ratio = 0.0
 
@@ -89,6 +91,13 @@ libraries = {
 }
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1924.0001, 960)
+scale = Vector2(1.4615386, 1.4187397)
+texture = ExtResource("3_re3g1")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
